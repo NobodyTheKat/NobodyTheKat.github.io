@@ -1,0 +1,32 @@
+@font-face{font-family:"Minecraft";src:url(../assets/minecraft.woff2) format("woff2");font-display:swap}
+:root{
+  --bg:#1b1d22; --slot:#2a2d35; --slot-hi:#3a3e49; --edge:#0e0f12;
+  --text:#e6e8ec; --muted:#9aa1ae; --diamond:#4eeed4; --diamond-dim:#1f8f80;
+  --cur:auto;
+}
+*{box-sizing:border-box;cursor:var(--cur)}
+html{background:var(--bg)}
+body{
+  margin:0;min-height:100vh;color:var(--text);
+  font:1.25rem/1.5 "Minecraft",monospace;
+  background:repeating-conic-gradient(#202329 0 25%,#1b1d22 0 50%) 0 0/32px 32px;
+  -webkit-font-smoothing:none;
+}
+main{max-width:860px;margin:0 auto;padding:clamp(2rem,8vw,6rem) 1.25rem 4rem}
+.id{display:flex;align-items:center;gap:min(1.25rem,3vw);margin-bottom:1.5rem}
+.id img{flex:none;width:clamp(56px,14vw,112px);height:clamp(56px,14vw,112px);image-rendering:pixelated;border:4px solid var(--edge);display:block}
+h1{font-size:min(4rem,6.2vw);white-space:nowrap;min-width:0;line-height:1;margin:0;font-weight:400;color:var(--diamond);
+   text-shadow:.07em .07em 0 var(--diamond-dim)}
+p{max-width:34rem;margin:0 0 3rem}
+.hotbar{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.75rem}
+.slot{
+  display:block;padding:1.1rem 1rem 1rem;text-decoration:none;color:var(--text);
+  background:var(--slot);border:4px solid var(--edge);
+  box-shadow:inset 4px 4px 0 var(--slot-hi),inset -4px -4px 0 #1d1f25;
+  transition:transform .12s ease,background .12s ease;
+}
+.slot:hover,.slot:focus-visible{background:var(--slot-hi);transform:translateY(-3px);outline:4px solid var(--diamond);outline-offset:2px}
+.slot b{display:block;font-weight:400;font-size:1.4rem;color:var(--diamond)}
+.slot span{color:var(--muted);font-size:1.05rem;overflow-wrap:anywhere}
+@media (hover:hover) and (pointer:fine){:root{--cur:url(../assets/cursor.png) 3 4, auto}}
+@media (prefers-reduced-motion:reduce){.slot{transition:none}}
