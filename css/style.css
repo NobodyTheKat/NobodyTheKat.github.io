@@ -28,5 +28,5 @@ p{max-width:34rem;margin:0 0 3rem}
 .slot:hover,.slot:focus-visible{background:var(--slot-hi);transform:translateY(-3px);outline:4px solid var(--diamond);outline-offset:2px}
 .slot b{display:block;font-weight:400;font-size:1.4rem;color:var(--diamond)}
 .slot span{color:var(--muted);font-size:1.05rem;overflow-wrap:anywhere}
-@media (hover:hover) and (pointer:fine){:root{--cur:url(../assets/cursor.png) 3 4, auto}}
+@media (hover:hover) and (pointer:fine){:root{--cur:image-set(url(../assets/cursor.png) 2x) 2 2, auto}}
 @media (prefers-reduced-motion:reduce){.slot{transition:none}}
