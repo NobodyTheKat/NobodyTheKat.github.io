@@ -14,15 +14,6 @@
 
 Hi, I'm NobodyTheKat. I like using cybersecurity basics like `nmap` and Kali, and I play video games like Minecraft and Roblox. This repo is the source of my personal page, which collects all my links in one place.
 
-## Features
-
-- Pixel-art avatar next to the title
-- Real Minecraft font, served locally (no external requests)
-- Diamond axe mouse cursor, enabled only on devices with a mouse
-- Responsive layout: the title always stays on one line and shrinks to fit small screens
-- Inventory-style link slots for Instagram, Spotify, GitHub, Twitch, Roblox and Discord
-- No JavaScript, no build step, no dependencies
-
 ## Project structure
 
 ```
